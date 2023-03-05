@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="926.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proiect.ProiectController">
+   <children>
+      <TabPane prefHeight="926.0" prefWidth="1294.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Home">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="902.0" fitWidth="1294.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true">
+                           <image>
+                              <Image url="file:page_background.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="295.0" layoutY="314.0" text="Administrarea Bibliotecilor">
+                           <font>
+                              <Font name="Serif Regular" size="64.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="tab_autori" onSelectionChanged="#vezi_autori" text="Autori">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="795.0" prefWidth="1140.0">
+                     <children>
+                        <ImageView blendMode="SRC_ATOP" fitHeight="909.0" fitWidth="1300.0" opacity="0.26" pickOnBounds="true">
+                           <image>
+                              <Image url="file:autori.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="buton_autor" layoutX="292.0" layoutY="177.0" mnemonicParsing="false" onAction="#addToTable" text="Adauga autor">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="autori" disable="true" layoutX="822.0" layoutY="817.0" mnemonicParsing="false" onAction="#del_Line" prefHeight="34.0" prefWidth="197.0" text="Sterge linia selectata">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                        <Label layoutX="557.0" layoutY="28.0" prefHeight="47.0" prefWidth="181.0" text="Tabela Autorilor" textAlignment="CENTER">
+                           <font>
+                              <Font name="Serif Bold" size="24.0" />
+                           </font></Label>
+                        <TableView fx:id="tabela_Autori" layoutX="33.0" layoutY="213.0" prefHeight="574.0" prefWidth="1222.0">
+                          <columns>
+                            <TableColumn fx:id="IDautor" prefWidth="259.0" text="idAutor" />
+                            <TableColumn fx:id="NumeAutor" prefWidth="313.0" text=" Nume" />
+                              <TableColumn fx:id="PrenumeAutor" prefWidth="333.0" text=" Prenume" />
+                              <TableColumn fx:id="DataNasterii" prefWidth="318.0" text="Data Nasterii" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="nume_autor" layoutX="131.0" layoutY="112.0" />
+                        <Label layoutX="44.0" layoutY="116.0" text="Nume Autor :" />
+                        <Label layoutX="37.0" layoutY="145.0" text="Prenume Autor :" />
+                        <Label layoutX="43.0" layoutY="181.0" text="Data Nasterii :" />
+                        <TextField fx:id="prenume_autor" layoutX="131.0" layoutY="145.0" />
+                        <TextField fx:id="dataNasterii_autor" layoutX="131.0" layoutY="177.0" />
+                        <Button fx:id="modify_autor" disable="true" layoutX="249.0" layoutY="817.0" mnemonicParsing="false" onAction="#OpenModAutor" prefHeight="34.0" prefWidth="197.0" text="Modifica linia selectata">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                        <Label layoutX="80.0" layoutY="75.0" prefHeight="26.0" prefWidth="172.0" text="Adaugare autor nou" textAlignment="CENTER">
+                           <font>
+                              <Font name="Serif Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_carti" onSelectionChanged="#vezi_carti" text="Carti">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView blendMode="SRC_ATOP" fitHeight="909.0" fitWidth="1300.0" layoutX="-3.0" layoutY="-2.0" opacity="0.26" pickOnBounds="true">
+                           <image>
+                              <Image url="file:carti.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="buton_carte" layoutX="307.0" layoutY="175.0" mnemonicParsing="false" onAction="#addToTable" text="Adauga Carte">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="carti" disable="true" layoutX="921.0" layoutY="820.0" mnemonicParsing="false" onAction="#del_Line" prefHeight="34.0" prefWidth="197.0" text="Sterge linia selectata">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Label layoutX="581.0" layoutY="44.0" text="Tabela Carti">
+                           <font>
+                              <Font name="Serif Bold" size="24.0" />
+                           </font></Label>
+                        <TableView fx:id="tabela_Carti" layoutX="35.0" layoutY="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="1224.0">
+                           <columns>
+                              <TableColumn fx:id="IDcarte" prefWidth="250.0" text="idCarte" />
+                              <TableColumn fx:id="NumeCarte" prefWidth="342.0" text="Nume" />
+                              <TableColumn fx:id="Gen" prefWidth="320.0" text="Gen" />
+                              <TableColumn fx:id="DataPublicarii" prefWidth="311.0" text="Data publicarii" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="dataPublicarii_carte" layoutX="142.0" layoutY="175.0" />
+                        <Label layoutX="57.0" layoutY="114.0" text="Nume Carte :" />
+                        <Label layoutX="78.0" layoutY="145.0" text="Gen :" />
+                        <Label layoutX="51.0" layoutY="179.0" text="Data Publicarii :" />
+                        <TextField fx:id="gen_carte" layoutX="142.0" layoutY="141.0" />
+                        <TextField fx:id="nume_carte" layoutX="142.0" layoutY="110.0" />
+                        <Button fx:id="modify_carte" disable="true" layoutX="203.0" layoutY="827.0" mnemonicParsing="false" onAction="#OpenModCarte" prefHeight="34.0" prefWidth="197.0" text="Modifica linia selectata">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Label layoutX="78.0" layoutY="72.0" text="Adaugare carte noua">
+                           <font>
+                              <Font name="Serif Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_biblioteci" onSelectionChanged="#vezi_biblioteci" text="Biblioteci">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView blendMode="SRC_ATOP" fitHeight="909.0" fitWidth="1300.0" opacity="0.26" pickOnBounds="true">
+                           <image>
+                              <Image url="file:biblioteci.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="buton_biblioteca" layoutX="339.0" layoutY="206.0" mnemonicParsing="false" onAction="#addToTable" text="Adauga Biblioteca">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="biblioteci" disable="true" layoutX="869.0" layoutY="821.0" mnemonicParsing="false" onAction="#del_Line" prefHeight="34.0" prefWidth="197.0" text="Sterge linia selectata">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Label layoutX="545.0" layoutY="46.0" text="Tabela Bibliotecilor">
+                           <font>
+                              <Font name="Serif Bold" size="24.0" />
+                           </font></Label>
+                        <TableView fx:id="tabela_Biblioteci" layoutX="35.0" layoutY="247.0" prefHeight="551.0" prefWidth="1224.0">
+                           <columns>
+                              <TableColumn fx:id="IDbiblioteca" prefWidth="200.0" text="idBiblioteca" />
+                              <TableColumn fx:id="NumeBiblioteca" prefWidth="276.0" text="Nume" />
+                              <TableColumn fx:id="AdresaBiblioteca" prefWidth="290.0" text="Adresa" />
+                              <TableColumn fx:id="idAutor_bibl" prefWidth="244.0" text="idAutor" />
+                              <TableColumn fx:id="idCarte_bibl" prefWidth="213.0" text="idCarte" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="nume_bibl" layoutX="168.0" layoutY="115.0" prefHeight="25.0" prefWidth="155.0" />
+                        <TextField fx:id="adresa_bibl" layoutX="166.0" layoutY="145.0" prefHeight="25.0" prefWidth="158.0" />
+                        <Label layoutX="45.0" layoutY="119.0" text=" Numele bibliotecii: :" />
+                        <Label layoutX="78.0" layoutY="149.0" text="Adresa :" />
+                        <MenuButton fx:id="autori_list" layoutX="165.0" layoutY="175.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Autor">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                        <MenuButton fx:id="carti_list" layoutX="165.0" layoutY="206.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Carte">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                        </MenuButton>
+                        <Button fx:id="modify_biblioteca" disable="true" layoutX="201.0" layoutY="821.0" mnemonicParsing="false" onAction="#OpenModBiblioteca" prefHeight="34.0" prefWidth="197.0" text="Modifica linia selectata">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Label layoutX="55.0" layoutY="180.0" text="Selectati autorul:" />
+                        <Label layoutX="58.0" layoutY="210.0" text="Selectati cartea:" />
+                        <Label layoutX="99.0" layoutY="74.0" text="Adaugare biblioteca noua">
+                           <font>
+                              <Font name="Serif Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

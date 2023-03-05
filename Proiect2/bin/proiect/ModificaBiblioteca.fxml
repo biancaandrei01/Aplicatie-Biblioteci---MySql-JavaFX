@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="dialogPane" headerText="Modificare Biblioteca" prefHeight="192.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proiect.BiblioteciDialogCon">
+   <buttonTypes>
+      <ButtonType fx:constant="APPLY" />
+      <ButtonType fx:constant="CLOSE" />
+   </buttonTypes>
+   <content>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="643.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="239.0" minWidth="0.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="202.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="202.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="329.0" minWidth="10.0" prefWidth="270.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="adresa_bibl_mod" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="60.0" text="Adresa:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="63.0" text="Nume:">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <TextField fx:id="nume_bibl_mod" GridPane.columnIndex="1" />
+            <MenuButton fx:id="idAutor_mod" mnemonicParsing="false" prefHeight="26.0" prefWidth="192.0" text="Autor" GridPane.columnIndex="3">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="idCarte_mod" mnemonicParsing="false" prefHeight="26.0" prefWidth="192.0" text="Carte" GridPane.columnIndex="3" GridPane.rowIndex="1">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </MenuButton>
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="166.0" text="Selectati un autor:" GridPane.columnIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="165.0" text="Selectati o carte:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </content>
+</DialogPane>
