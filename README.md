@@ -4,7 +4,7 @@ O aplicatie ce contine o baza de date creata in sistemul de gestiune a bazelor d
 Interfata permite utilizatorului sa execute urmatoarele operatii pe toate tabelele (inclusiv pe cele de leagatura, deoarece avem in cazul de fata o asociere M:N): vizualizare, adaugare, modificare si stergere de date. Vizualizarea tabelei de legatura presupune vizualizarea datelor referite din celelalte tabele. 
 Alaturi de aplicatie este incarcata si o documentatie ce contine descrierea tehnologiei folosite precum si descrierea aplicatiei.
 
-Un preview general pentru cum arata interfata aplicatiei:
+Un preview asupra aspectului interfetei si diagrama conceptuala a bazei de date:
 
 ![image](https://user-images.githubusercontent.com/104580330/224134600-bc55adb0-22dd-41fa-8fdb-65de754441ea.png)
 Diagrama conceptuala a bazei de date
