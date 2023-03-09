@@ -19,4 +19,4 @@ Pagina cu tabela Autorilor
 Pagina cu tabela Cartilor
 
 ![image](https://user-images.githubusercontent.com/104580330/224135038-64d8c40d-a590-4ee3-9790-4b0ed50e0318.png)
-Pagina cu tebla Bibliotecilor
+Pagina cu tabela Bibliotecilor
